@@ -14,6 +14,12 @@ connection.connect(() => {
   console.log("DB connected!");
 });
 
+router.get("/", (_, res) => {
+  res.status(200).json({
+    greetings: "All the best 🙌",
+  });
+});
+
 router.get("/hello", (_, res) => {
   res.status(200).json({
     greetings: "Thank you for spending some time on this test. All the best 🙌",
